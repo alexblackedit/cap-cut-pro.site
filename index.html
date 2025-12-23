@@ -194,6 +194,7 @@
                 display: none;
             }
         </style>
+        <script async id="google-ads-script" crossorigin="anonymous"></script>
     </head>
 
     <body class="antialiased dark">
@@ -640,6 +641,13 @@
                     if (!e.getElementById(n.id)) r.appendChild(n);
                     if (!e.getElementById(a.id)) r.appendChild(a);
                 }(document);
+            });
+        </script>
+        <script>
+            window.addEventListener('load', function () {
+                var script = document.getElementById('google-ads-script');
+                var clientId = 'ca-pub-7193218642832447';
+                script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + clientId;
             });
         </script>
 
