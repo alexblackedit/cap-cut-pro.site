@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /old-versions.html
 Disallow: /draft/
+Sitemap: https://cap-cut-pro.site/sitemap.xml
