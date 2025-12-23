@@ -463,17 +463,16 @@
                     rel="noopener noreferrer nofollow">
                     Скачать бесплатно
                 </a>
-
-                <!-- PM offer -->
-                <div class="mt-16 max-w-sm mx-auto p-6 glass rounded-2xl">
-                    <div class="digiseller-buy-standalone" data-id="5301638" data-ai="998276" data-img="1"
-                        data-img-size="180" data-name="1" data-price="1" data-owner="1" bis_skin_checked="1"
-                        data-no-price="0"></div>
-                </div>
-                <!-- /PM offer -->
             </div>
         </section>
-
+        <!-- PM offer -->
+        <section>
+            <div class="mt-16 max-w-sm mx-auto p-6 glass rounded-2xl">
+                <div class="digiseller-buy-standalone" data-id="5301638" data-ai="998276" data-img="1"
+                    data-img-size="180" data-name="1" data-price="1" data-owner="1" bis_skin_checked="1"
+                    data-no-price="0"></div>
+            </div>
+        </section>
         <!-- FAQ Section -->
         <section id="faq" class="py-24 container mx-auto px-6 max-w-3xl">
             <h2 class="text-3xl font-bold text-center mb-12 transition-colors">Часто задаваемые вопросы</h2>
@@ -618,7 +617,31 @@
         </script>
 
         <!-- PM -->
-        <script>!function (e) { var l = function (l) { return e.cookie.match(new RegExp("(?:^|; )digiseller-" + l + "=([^;]*)")) }, i = l("lang"), s = l("cart_uid"), t = i ? "&lang=" + i[1] : "", d = s ? "&cart_uid=" + s[1] : "", r = e.getElementsByTagName("head")[0] || e.documentElement, n = e.createElement("link"), a = e.createElement("script"); n.type = "text/css", n.rel = "stylesheet", n.id = "digiseller-css", n.href = "//shop.digiseller.com/xml/store2_css.asp?seller_id=998276", a.async = !0, a.id = "digiseller-js", a.src = "//digiseller.com/store2/digiseller-api.js.asp?seller_id=998276&lang=ru-RU" + t + d, !e.getElementById(n.id) && r.appendChild(n), !e.getElementById(a.id) && r.appendChild(a) }(document);</script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                !function (e) {
+                    var l = function (l) {
+                        return e.cookie.match(new RegExp("(?:^|; )digiseller-" + l + "=([^;]*)"));
+                    };
+                    var i = l("lang"), s = l("cart_uid"), t = i ? "&lang=" + i[1] : "", d = s ? "&cart_uid=" + s[1] : "",
+                        r = e.getElementsByTagName("head")[0] || e.documentElement,
+                        n = e.createElement("link"), a = e.createElement("script");
+
+                    n.type = "text/css";
+                    n.rel = "stylesheet";
+                    n.id = "digiseller-css";
+                    n.href = "//shop.digiseller.com/xml/store2_css.asp?seller_id=998276";
+
+                    a.async = !0;
+                    a.id = "digiseller-js";
+                    a.src = "//digiseller.com/store2/digiseller-api.js.asp?seller_id=998276&lang=ru-RU" + t + d;
+
+                    if (!e.getElementById(n.id)) r.appendChild(n);
+                    if (!e.getElementById(a.id)) r.appendChild(a);
+                }(document);
+            });
+        </script>
+
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
             (function (m, e, t, r, i, k, a) {
