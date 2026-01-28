@@ -88,7 +88,20 @@
                 background-size: 1.5em 1.5em;
                 padding-right: 2.5rem;
             }
+
+            .rtb__container {
+                margin-top: 1rem;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         </style>
+
+        <!-- Yandex.RTB -->
+        <script>
+            window.yaContextCb = window.yaContextCb || [];
+        </script>
+        <script src="https://yandex.ru/ads/system/context.js" async></script>
     </head>
 
     <body class="antialiased dark flex flex-col min-h-screen">
@@ -368,7 +381,16 @@
                             Пожалуйста, выберите версию для скачивания
                         </p>
                     </div>
-
+                    <!-- Yandex.RTB R-A-18569117-1 -->
+                    <div id="yandex_rtb_R-A-18569117-1" class="rtb__container"></div>
+                    <script>
+                        window.yaContextCb.push(() => {
+                            Ya.Context.AdvManager.render({
+                                "blockId": "R-A-18569117-1",
+                                "renderTo": "yandex_rtb_R-A-18569117-1"
+                            })
+                        })
+                    </script>
                 </div>
             </div>
         </section>

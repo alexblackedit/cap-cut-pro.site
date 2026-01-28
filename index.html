@@ -193,8 +193,18 @@
             summary::-webkit-details-marker {
                 display: none;
             }
+
+            .rtb__container {
+                margin-top: 1rem;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         </style>
         <script async id="google-ads-script" crossorigin="anonymous"></script>
+        <!-- Yandex.RTB -->
+        <script>window.yaContextCb = window.yaContextCb || []</script>
+        <script src="https://yandex.ru/ads/system/context.js" async></script>
     </head>
 
     <body class="antialiased dark">
@@ -280,6 +290,16 @@
                 <img src="https://cap-cut-pro.site/capcutpc.png" alt="capcut на пк версия на русском языке" width="634"
                     height="394" class="w-full opacity-90 dark:opacity-80 transition-opacity">
             </div>
+            <!-- Yandex.RTB R-A-18569117-1 -->
+            <div id="yandex_rtb_R-A-18569117-1" class="rtb__container"></div>
+            <script>
+                window.yaContextCb.push(() => {
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-18569117-1",
+                        "renderTo": "yandex_rtb_R-A-18569117-1"
+                    })
+                })
+            </script>
         </section>
 
         <!-- Features Section -->
