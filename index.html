@@ -735,107 +735,116 @@
             }
         </script>
 
-        // SEO Tabs Logic
-        function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display="none" ;
-            tabcontent[i].classList.remove("active"); } tablinks=document.getElementsByClassName("tab-link"); for (i=0;
-            i < tablinks.length; i++) { tablinks[i].classList.remove("active"); }
-            document.getElementById(tabName).style.display="block" ;
-            document.getElementById(tabName).classList.add("active"); evt.currentTarget.classList.add("active"); } <!--
-            PM -->
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    !function (e) {
-                        var l = function (l) {
-                            return e.cookie.match(new RegExp("(?:^|; )digiseller-" + l + "=([^;]*)"));
-                        };
-                        var i = l("lang"), s = l("cart_uid"), t = i ? "&lang=" + i[1] : "", d = s ? "&cart_uid=" + s[1] : "",
-                            r = e.getElementsByTagName("head")[0] || e.documentElement,
-                            n = e.createElement("link"), a = e.createElement("script");
+        <script>
+            // SEO Tabs Logic
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tab-content");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                    tabcontent[i].classList.remove("active");
+                }
+                tablinks = document.getElementsByClassName("tab-link");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+                }
+                document.getElementById(tabName).style.display = "block";
+                document.getElementById(tabName).classList.add("active");
+                evt.currentTarget.classList.add("active");
+            }
+        </script>
+        PM -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                !function (e) {
+                    var l = function (l) {
+                        return e.cookie.match(new RegExp("(?:^|; )digiseller-" + l + "=([^;]*)"));
+                    };
+                    var i = l("lang"), s = l("cart_uid"), t = i ? "&lang=" + i[1] : "", d = s ? "&cart_uid=" + s[1] : "",
+                        r = e.getElementsByTagName("head")[0] || e.documentElement,
+                        n = e.createElement("link"), a = e.createElement("script");
 
-                        n.type = "text/css";
-                        n.rel = "stylesheet";
-                        n.id = "digiseller-css";
-                        n.href = "//shop.digiseller.com/xml/store2_css.asp?seller_id=998276";
+                    n.type = "text/css";
+                    n.rel = "stylesheet";
+                    n.id = "digiseller-css";
+                    n.href = "//shop.digiseller.com/xml/store2_css.asp?seller_id=998276";
 
-                        a.async = !0;
-                        a.id = "digiseller-js";
-                        a.src = "//digiseller.com/store2/digiseller-api.js.asp?seller_id=998276&lang=ru-RU" + t + d;
+                    a.async = !0;
+                    a.id = "digiseller-js";
+                    a.src = "//digiseller.com/store2/digiseller-api.js.asp?seller_id=998276&lang=ru-RU" + t + d;
 
-                        if (!e.getElementById(n.id)) r.appendChild(n);
-                        if (!e.getElementById(a.id)) r.appendChild(a);
-                    }(document);
-                });
-            </script>
-            <script>
-                window.addEventListener('load', function () {
-                    var script = document.getElementById('google-ads-script');
-                    var clientId = 'ca-pub-7193218642832447';
-                    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + clientId;
-                });
-            </script>
+                    if (!e.getElementById(n.id)) r.appendChild(n);
+                    if (!e.getElementById(a.id)) r.appendChild(a);
+                }(document);
+            });
+        </script>
+        <script>
+            window.addEventListener('load', function () {
+                var script = document.getElementById('google-ads-script');
+                var clientId = 'ca-pub-7193218642832447';
+                script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + clientId;
+            });
+        </script>
 
-            <!-- Yandex.Metrika counter -->
-            <script type="text/javascript">
-                (function (m, e, t, r, i, k, a) {
-                    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-                    m[i].l = 1 * new Date();
-                    for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-                    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-                })
-                    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            })
+                (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-                ym(96319911, "init", {
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true
-                });
-            </script>
-            <noscript>
-                <div><img src="https://mc.yandex.ru/watch/96319911" style="position:absolute; left:-9999px;" alt="" />
-                </div>
-            </noscript>
-            <!-- /Yandex.Metrika counter -->
-            <!-- Cookie Consent Banner -->
-            <div id="cookie-banner"
-                class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-white dark:bg-[#080808] border-t border-gray-200 dark:border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] transition-transform duration-500 transform translate-y-full">
-                <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div class="flex-1">
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Наш сайт и подключенные к нему сервисы веб-аналитики (в том числе, Яндекс Метрика)
-                            используют файлы Cookie.
-                            Продолжая использование данного сайта, вы даете свое согласие с политикой конфиденциальности
-                            и обработки персональных данных.
-                        </p>
-                    </div>
-                    <button id="accept-cookies"
-                        class="btn-primary text-white font-bold py-2 px-8 rounded-full text-sm hover:shadow-lg transition-all whitespace-nowrap">
-                        Принять
-                    </button>
-                </div>
+            ym(96319911, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true
+            });
+        </script>
+        <noscript>
+            <div><img src="https://mc.yandex.ru/watch/96319911" style="position:absolute; left:-9999px;" alt="" />
             </div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+        <!-- Cookie Consent Banner -->
+        <div id="cookie-banner"
+            class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-white dark:bg-[#080808] border-t border-gray-200 dark:border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] transition-transform duration-500 transform translate-y-full">
+            <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Наш сайт и подключенные к нему сервисы веб-аналитики (в том числе, Яндекс Метрика)
+                        используют файлы Cookie.
+                        Продолжая использование данного сайта, вы даете свое согласие с политикой конфиденциальности
+                        и обработки персональных данных.
+                    </p>
+                </div>
+                <button id="accept-cookies"
+                    class="btn-primary text-white font-bold py-2 px-8 rounded-full text-sm hover:shadow-lg transition-all whitespace-nowrap">
+                    Принять
+                </button>
+            </div>
+        </div>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const cookieBanner = document.getElementById('cookie-banner');
-                    const acceptBtn = document.getElementById('accept-cookies');
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const cookieBanner = document.getElementById('cookie-banner');
+                const acceptBtn = document.getElementById('accept-cookies');
 
-                    // Show banner if not accepted yet
-                    if (!localStorage.getItem('cookieConsent')) {
-                        setTimeout(() => {
-                            cookieBanner.classList.remove('translate-y-full');
-                        }, 1000);
-                    }
+                // Show banner if not accepted yet
+                if (!localStorage.getItem('cookieConsent')) {
+                    setTimeout(() => {
+                        cookieBanner.classList.remove('translate-y-full');
+                    }, 1000);
+                }
 
-                    // Handle acceptance
-                    acceptBtn.addEventListener('click', () => {
-                        localStorage.setItem('cookieConsent', 'true');
-                        cookieBanner.classList.add('translate-y-full');
-                    });
+                // Handle acceptance
+                acceptBtn.addEventListener('click', () => {
+                    localStorage.setItem('cookieConsent', 'true');
+                    cookieBanner.classList.add('translate-y-full');
                 });
-            </script>
+            });
+        </script>
     </body>
 
 </html>
