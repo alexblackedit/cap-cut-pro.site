@@ -100,6 +100,40 @@
         document.body.classList.remove("light");
       }
       window.localStorage.setItem("theme", theme);
+
+      // Theme Toggle Event Listener
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggleBtn = document.getElementById("theme-toggle");
+        const sunIcon = document.getElementById("sun-icon");
+        const moonIcon = document.getElementById("moon-icon");
+
+        if (themeToggleBtn && sunIcon && moonIcon) {
+          // Update icons based on current theme
+          if (document.documentElement.classList.contains("dark")) {
+            sunIcon.classList.add("hidden");
+            moonIcon.classList.remove("hidden");
+          } else {
+            sunIcon.classList.remove("hidden");
+            moonIcon.classList.add("hidden");
+          }
+
+          themeToggleBtn.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark");
+            document.body.classList.toggle("dark");
+            document.body.classList.toggle("light");
+
+            if (document.documentElement.classList.contains("dark")) {
+              localStorage.setItem("theme", "dark");
+              sunIcon.classList.add("hidden");
+              moonIcon.classList.remove("hidden");
+            } else {
+              localStorage.setItem("theme", "light");
+              sunIcon.classList.remove("hidden");
+              moonIcon.classList.add("hidden");
+            }
+          });
+        }
+      });
     </script> <script>
       document.addEventListener("DOMContentLoaded", function () {
         !(function (e) {
