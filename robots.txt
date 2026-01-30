@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /old-versions.html
-Disallow: /draft/
+
+User-agent: Yandex
+Disallow: /en/
+
 Sitemap: https://cap-cut-pro.site/sitemap.xml
